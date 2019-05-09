@@ -14,13 +14,6 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HeroesComponent,
-    HeroDetailComponent,
-    MessagesComponent,
-    DashboardComponent
-  ],
   imports: [
     BrowserModule,
     FormsModule,
@@ -28,6 +21,13 @@ import { InMemoryDataService } from './in-memory-data.service';
     HttpClientModule,
     // The forRoot() configuration method takes an InMemoryDataService class that primes the in-memory database.
     HttpClientInMemoryWebApiModule.forRoot(InMemoryDataService, { dataEncapsulation: false })
+  ],
+  declarations: [
+    AppComponent,
+    HeroesComponent,
+    HeroDetailComponent,
+    MessagesComponent,
+    DashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
