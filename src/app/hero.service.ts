@@ -21,4 +21,9 @@ export class HeroService {
     // of(HEROES) returns an Observable<Hero[]> that emits a single value, the array of mock heroes
     return of(HEROES);
   }
+
+  getHero(id: number): Observable<Hero> {
+    this.messageService.add(`HeroService: fetched hero id=${id}`);
+    return of(HEROES.find(hero => hero.id === id));
+  }
 }
